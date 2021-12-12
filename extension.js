@@ -1,12 +1,8 @@
 const vscode = require('vscode');
 
 function activate(context) {
-
 	const open = vscode.workspace.getConfiguration().get("vscodePluginI18n.open");
 	const pathOption = vscode.workspace.getConfiguration().get('vscodePluginI18n.i18nPath');
-
-
-	console.log('open', open);
 
 	if (open && pathOption) {
 		vscode.window.showInformationMessage('i18n-show-translation 插件加载完成');
